@@ -1,0 +1,135 @@
+NOTES PYTHON
+https://www.sanfoundry.com/1000-python-questions-answers/
+
+Data types in Python
+str , int , float , complex ,  list , tuple , set , frozenset , 
+Variable in python
+%whos – this command shows the python variable currently in the memory 
+Type(variable-name) – gives the type of the variable
+del variable-name – delete variable
+Python is a dynamically typed programming language. The data-type of the variable is determined based on the value, it is assigned.
+Multiplying a string by an integer repeats the string that many times 
+‘abc’ * 2 = 'abcabc'
+# in python we have an variable _  : this variable stores the latest variable that is not assigned to another variable for ex -
+z = 3
+x = 6
+z + x
+print(_)
+
+Comparison operators- >, <, ==, !=, <=, >=  are used to combine two or more comparison statements
+Logical operators and -> or -> not
+z < 5 and not x > 7
+
+
+WHAT IS LIST?
+A group of heterogeneous and indexed collection of mutable elements whose insertion order is maintained and can be represented as a whole using [] bracket can be termed as a list in python. A list in python allows duplicate values because unlike set there is index and can be used to differentiate between two similar elements.
+Example L1 = []
+L1.append (3) -> insert at the end of the list
+L1.insert (2, 3)
+L1 [0:4]
+L1 [3:]
+L1 [:5]
+** note that slicing can happen only from left to right and not from right to left.
+L1 [-1:-4]  error
+L1 [-4:-1]
+L1.pop() – removes the last element and returns the element
+L1.pop(2) – removes the element at index 2 and returns the element
+l1.sort() – ascending order
+l1.sort(reverse = True) – descending order
+
+WHAT IS A TUPLE?
+Tuple is similar to List in every possible ways but it is immutable in nature. Once a tuple is created, we cannot remove, add or modify the elements of a tuple. The elements can only be accessed using index. 
+
+t1 = (3 , "Rashmi" , -4)
+type(t1)
+t1.count(3) – number of times this element appears in the tuple
+t1.index('Rashmi') – index of this element
+
+
+It is also used as key in a dictionary or object in python.
+# Creating a dictionary with tuples as keys
+student_data = {
+    ("Alice", 25): {"major": "Computer Science", "GPA": 3.8},
+    ("Bob", 22): {"major": "Mathematics", "GPA": 3.5},
+    ("Charlie", 23): {"major": "Physics", "GPA": 3.7}
+}
+
+# Accessing values using tuple keys
+print (student_data[("Alice", 25)]["GPA"])  # Output: 3.8
+
+WHAT IS SET?
+Set is an unordered, heterogeneous and mutable collection of elements; which does not allow any duplicates and is represented using {} bracket. It means that a set can only contain unique elements.
+Ex - S1 = {}
+Type(s1)
+S1.add(21)
+S1.add(“Rashmi”)
+S1.pop()
+S1.remove(21)
+
+SET OPERATION – union, intersection and difference
+Union: A ∪ B. Union will return a new set which contains all the elements from both A and B. 
+A.union(B) or A | B
+Example:
+A = {1, 2, 3}
+B = {3, 4, 5}
+A ∪ B = {1, 2, 3, 4, 5}
+Intersection: A ∩ B. This operation creates a new set which contains only the common elements from both the set A and B.
+A.intersection(B) or A & B
+Example:
+A = {1, 2, 3}
+B = {3, 4, 5}
+A ∪ B = {1, 2, 3, 4, 5}
+
+Difference: A – B. This operation creates a new set which contains the elements of A which are not present in set B. 
+A.difference(B) or A - B
+Example:
+A = {1, 2, 3}
+B = {3, 4, 5}
+A - B = {1, 2}
+
+WHAT IS A FROZENSET?
+Similar to tuple, a frozenset is a special kind off set which is immutable in nature. Once a frozenset is created, its elements cannot be removed, modified or added. Since it is immutable in nature, it can be used for hashing as keys in a dictionary.
+
+WHAT IS A DICTIONARY?
+A collection of key value pairs, separated by commas can be termed as a dictionary
+D1 = {1 : “A” , 2 : “B”}
+D1.keys() – returns a list of keys
+D1.items() – returns a list of tuple of the key-value pair
+D1.values() – returns a list of the values 
+D1.popitem() – returns the last element and remove it
+
+len Method – This method takes in an iterable as an input and returns the length of that iterable object.
+len([1,2,3,4]) – 4
+
+input method – Takes input from the user and return it as a string
+a = input() -> whatever the user provide will be returned a string
+b = input(“insert a number”) -> “quoted message for the user to understand”
+
+TYPE CASTING – Type casting is allowed in python when it is logically feasible. i.e there should be relevance between the data type we are trying to convert.
+For example – 
+S1 = ‘12’
+V1 =int(S1) ---> no problem because it a string that holds int literal
+S2 =’rashmi’
+V2 =int(S2) ---> error! Because it is not possible to convert this string to base 10 integer
+L1 =[1,3,5]
+T1 =tuple(L1)
+L2 = [“rashmi , “rashmi” , 4, 5, 7,9,9,0]
+S2 = set(l2)  --  {“rashmi” , 4 , 5 ,7,9,0}  ---> no problem, it will convert to a set and the duplicate values will be removed
+i1 = int(input("insert a number"))  --->  input method and type-casting together. Directly converting to int while taking input from user.
+i2 = int(input("enter a number")) enter a number rashmi 21 ---> error! Because if we put anything other than int literal it cannot convert to base 10 int value; so an error is encountered.
+LOOPING IN PYTHON
+In python looping can be done using the while and for loop concept
+A = 0
+While A <= 20 :
+	Print(A)
+	A +=1
+
+
+
+
+
+
+
+
+
+
